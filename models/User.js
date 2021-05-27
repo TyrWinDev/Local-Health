@@ -9,9 +9,9 @@ const UserSchema = new mongoose.Schema({
   phoneNumber: Number,
   streetAddress: String,
   postalCode: Number,
-  state: String,
-  country:  String,
+  municipality: String,
   role: String,
+  specialty: String,
   password: String,
 });
 
