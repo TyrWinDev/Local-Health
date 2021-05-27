@@ -31,6 +31,32 @@
                       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div class="mb-3">
+                      <label for="phoneNumber" class="form-label">Phone Number</label>
+
+                      <input type="text"  class="form-control" id="phoneNumber" name="phoneNumber" maxlength="11"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="streetAddress" class="form-label">Street Address</label>
+                      <input type="text" class="form-control" id="streetAddress" aria-describedby="streetAddress" name="streetAddress" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="state">Select your State</label>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <select name="municipality" id="municipality">
+                        <option value="select-state">Select your Municipality</option>
+                        <option value="cabimas">Cabimas</option>
+                        <option value="ciudad-ojeda">Ciudad Ojeda</option>
+                        <option value="lagunillas">Lagunillas</option>
+                        <option value="maracaibo">Maracaibo</option>
+                        <option value="simon-bolivar">Simon simon-bolivar</option>
+                      </select>
+
+                      <input type="tel" name="postalCode" id="postalCode" maxlength="4" value="Postal Code">
+                    </div>
+
+                    <div class="mb-3">
                       <label for="role">You are a...</label>
                     </div>
                     <div class="form-check">
@@ -40,11 +66,36 @@
                       </label>
                    </div>
                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="roleCheck" id="roleDoctor" value="Doctor">
+                      <input class="form-check-input" type="radio" name="roleCheck" id="roleDoctor" onclick="doctorCheck()" value="Doctor">
                       <label class="form-check-label" for="doctor">
                       Doctor
                       </label>
                    </div>
+
+                   <div class="mb-3 d-none" id="specialtyContainer" >
+                    <select name="specialty" id="specialty">
+                      <option value="select-specialty">Select your Specialty</option>
+                      <option value="anaesthesia">Anaesthesia</option>
+                      <option value="dermatology">Dermatology</option>
+                      <option value="emergency-medicine">Emergency Medicine</option>
+                      <option value="cardiology">Cardiology</option>
+                      <option value="family-medicine">Family Medicine</option>
+                      <option value="gastroenterology">Gastroenterology</option>
+                      <option value="general-surgery">General Surgery</option>
+                      <option value="internal-medicine">Internal Medicine</option>
+                      <option value="neurology">Neurology</option>
+                      <option value="neurosurgery">Neurosurgery</option>
+                      <option value="obstetrics-gynecology">Obstetrics and Ginecology Medicine</option>
+                      <option value="ophthalmology">Ophthalmology</option>
+                      <option value="orthopedic-surgery">Orthopedic Surgery</option>
+                      <option value="otolaryngology">Otolaryngology</option>
+                      <option value="pediatrics">Pediatrics</option>
+                      <option value="plastic-surgery">Plastic Surgery</option>
+                      <option value="pneumonology">Pneumonology</option>
+                      <option value="psychiatry">Psychiatry</option>
+                      <option value="urology">Urology</option>
+                    </select>
+                    </div>
 
                     <div class="mb-3">
                       <label for="password" class="form-label">Password</label>
