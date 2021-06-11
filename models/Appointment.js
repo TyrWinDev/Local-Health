@@ -6,6 +6,15 @@ const AppointmentSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
+  patient: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
+  symptoms: String,
+  date: {
+    type: date,
+    default: Date.now,
+  },
 });
 
-module.exports = mongoose.model("Patient", PatientSchema);
+module.exports = mongoose.model("Appointment", AppointmentSchema);

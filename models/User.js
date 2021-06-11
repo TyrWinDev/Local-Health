@@ -11,7 +11,7 @@ const UserSchema = new mongoose.Schema({
   streetAddress: String,
   postalCode: Number,
   municipality: String,
-  role: String,
+  role: String, //Either doctor or patient
   specialty: String,
   password: String,
   patient: [
